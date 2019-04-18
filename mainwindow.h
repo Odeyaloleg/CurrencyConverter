@@ -27,6 +27,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    bool comboBoxFilled = false;
 };
 
 #endif // MAINWINDOW_H

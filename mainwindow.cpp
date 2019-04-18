@@ -25,6 +25,9 @@ void MainWindow::on_pushButton_clicked()
 // How else?
 void MainWindow::on_lineEdit_textChanged(const QString &arg1)
 {
+    if(comboBoxFilled)
+        return;
+    comboBoxFilled = true;
     for(auto i = ratesUSD.begin(); i != ratesUSD.end(); ++i)
     {
         ui->comboBox->addItem(i.key());
