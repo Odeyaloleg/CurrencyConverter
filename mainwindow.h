@@ -7,8 +7,6 @@
 #include <QtNetwork/QNetworkReply>
 #include <QUrl>
 
-extern QMap<QString, double> ratesUSD;
-
 namespace Ui {
 class MainWindow;
 }
@@ -23,11 +21,12 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void on_lineEdit_textChanged(const QString &arg1);
+    void requestFinished();
 
 private:
     Ui::MainWindow *ui;
-    bool comboBoxFilled = false;
+    QNetworkAccessManager *nm;
+    QMap<QString, double> ratesUSD;
 };
 
 #endif // MAINWINDOW_H
