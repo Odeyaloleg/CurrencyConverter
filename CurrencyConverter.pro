@@ -26,10 +26,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    currencyusdrates.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    currencyusdrates.h
 
 FORMS += \
         mainwindow.ui

@@ -2,10 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QtNetwork/QNetworkAccessManager>
-#include <QtNetwork/QNetworkRequest>
-#include <QtNetwork/QNetworkReply>
-#include <QUrl>
+#include "currencyusdrates.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,13 +17,12 @@ public:
     ~MainWindow();
 
 private slots:
+    void fillComboBox(); // Fills combo boxes with currencies
     void on_pushButton_clicked();
-    void requestFinished();
 
 private:
     Ui::MainWindow *ui;
-    QNetworkAccessManager *nm;
-    QMap<QString, double> ratesUSD;
+    CurrencyUSDRates usdRates;
 };
 
 #endif // MAINWINDOW_H
